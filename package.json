@@ -1,0 +1,24 @@
+{
+  "name": "letsgodocs",
+  "version": "0.0.1",
+  "description": "Documentation for letsGo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev",
+    "docs:build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sab94/letsGoDocs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sab94/letsGoDocs/issues"
+  },
+  "homepage": "https://github.com/Sab94/letsGoDocs#readme",
+  "devDependencies": {
+    "vuepress": "^0.14.10"
+  }
+}
