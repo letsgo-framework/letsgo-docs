@@ -75,77 +75,31 @@ module.exports = {
             '/getting-started/install-requirements'
           ],
         },
-        // {
-        //   collapsable: true,
-        //   title: '💡 Guides',
-        //   children: [
-        //     '/3.x.x/concepts/concepts',
-        //     '/3.x.x/guides/api-documentation',
-        //     '/3.x.x/guides/authentication',
-        //     '/3.x.x/configurations/configurations',
-        //     '/3.x.x/guides/controllers',
-        //     '/3.x.x/guides/deployment',
-        //     '/3.x.x/guides/email',
-        //     '/3.x.x/guides/upload',
-        //     '/3.x.x/guides/filters',
-        //     '/3.x.x/guides/graphql',
-        //     '/3.x.x/guides/i18n',
-        //     '/3.x.x/guides/models',
-        //     '/3.x.x/guides/policies',
-        //     '/3.x.x/guides/public-assets',
-        //     '/3.x.x/guides/requests',
-        //     '/3.x.x/guides/responses',
-        //     '/3.x.x/guides/routing',
-        //     '/3.x.x/guides/services',
-        //     '/3.x.x/guides/webhooks',
-        //   ],
-        // },
-        // {
-        //   collapsable: true,
-        //   title: '⚙️️ Advanced',
-        //   children: [
-        //     '/3.x.x/advanced/customize-admin',
-        //     '/3.x.x/advanced/hooks',
-        //     '/3.x.x/advanced/logging',
-        //     '/3.x.x/advanced/middlewares',
-        //     '/3.x.x/advanced/usage-tracking',
-        //   ],
-        // },
-        // {
-        //   collapsable: true,
-        //   title: '🔌 Plugin Development',
-        //   children: [
-        //     '/3.x.x/plugin-development/quick-start',
-        //     '/3.x.x/plugin-development/plugin-architecture',
-        //     '/3.x.x/plugin-development/backend-development',
-        //     '/3.x.x/plugin-development/frontend-development',
-        //     '/3.x.x/plugin-development/frontend-use-cases',
-        //     '/3.x.x/plugin-development/utils',
-        //     // '/3.x.x/plugin-development/ui-components', TODO: Add this file
-        //   ],
-        // },
-        // {
-        //   collapsable: true,
-        //   title: '💻 Command Line Interface',
-        //   children: ['/3.x.x/cli/CLI'],
-        // },
-        // {
-        //   collapsable: true,
-        //   title: '🏗 API Reference',
-        //   children: ['/3.x.x/api-reference/reference'],
-        // },
-        // {
-        //   collapsable: false,
-        //   title: '📚 Resources',
-        //   children: [
-        //     [
-        //       'https://github.com/strapi/strapi/blob/master/CONTRIBUTING.md',
-        //       'Contributing guide',
-        //     ],
-        //     '/3.x.x/migration-guide/',
-        //     '/3.x.x/articles/',
-        //   ],
-        // },
+        {
+          collapsable: true,
+          title: '💡 Guides',
+          children: [
+            '/concepts/concepts',
+            '/guides/controllers',
+            '/guides/environment',
+            '/guides/databases',
+            '/guides/deployment',
+            '/guides/graphql',
+            '/guides/types',
+            '/guides/websocket',         ]
+        },
+        {
+          collapsable: true,
+          title: '💻 Command Line Interface',
+          children: ['cli/CLI'],
+        },
+        {
+          collapsable: false,
+          title: '📚 Resources',
+          children: [
+            '/articles/articles',
+          ],
+        },
       ]
     },
   },
