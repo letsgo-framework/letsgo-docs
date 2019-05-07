@@ -59,7 +59,6 @@ module.exports = {
     website: 'https://letsgo-framework.github.io',
     slack: 'https://slack.letsgo.io',
     blog: 'https://blog.letsgo.io',
-    docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Improve this page',
     serviceWorker: true,
