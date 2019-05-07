@@ -60,8 +60,7 @@ module.exports = {
     editLinkText: 'Improve this page',
     serviceWorker: true,
     hiddenLinks: ['/cli/CLI.html', '/api-reference/reference.html'],
-    sidebar: {
-      '/': [
+    sidebar: [
         {
           collapsable: false,
           title: '🚀 Getting started',
@@ -96,7 +95,6 @@ module.exports = {
           ],
         },
       ]
-    },
   },
 };
 
