@@ -5,7 +5,7 @@ const title = 'letsGo Documentation';
 const description = 'A Go Boilerplate for RESTful API';
 const color = '#2F80ED';
 const author = 'Sab94';
-const url = 'https://letsgo.io/documentation/';
+const url = 'https://letsgo-framework.github.io/';
 
 module.exports = {
   head: [
