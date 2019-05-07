@@ -32,8 +32,6 @@ module.exports = {
       'meta',
       { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
     ],
-    // ['link', { rel: 'apple-touch-icon', href: `/assets/apple-touch-icon.png` }],
-    // ['link', { rel: 'mask-icon', href: '/assets/safari-pinned-tab.svg', color: color }],
     ['meta', { name: 'msapplication-TileImage', content: '/rocket.png' }],
     ['meta', { name: 'msapplication-TileColor', content: color }],
   ],
@@ -53,7 +51,6 @@ module.exports = {
   title,
   description,
   base: '/',
-  ga: 'UA-54313258-1',
   themeConfig: {
     repo: 'letsgo-framework/letsgo',
     website: 'https://letsgo-framework.github.io',
