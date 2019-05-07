@@ -53,7 +53,7 @@ module.exports = {
   base: '/',
   themeConfig: {
     repo: 'letsgo-framework/letsgo',
-    website: 'https://letsgo-framework.github.io',
+    website: 'https://letsgo-framework.github.io/',
     slack: 'https://slack.letsgo.io',
     blog: 'https://blog.letsgo.io',
     editLinks: true,
@@ -61,40 +61,40 @@ module.exports = {
     serviceWorker: true,
     hiddenLinks: ['/cli/CLI.html', '/api-reference/reference.html'],
     sidebar: [
-        {
-          collapsable: false,
-          title: '🚀 Getting started',
-          children: [
-            '/getting-started/introduction',
-            '/getting-started/install-requirements'
-          ],
-        },
-        {
-          collapsable: true,
-          title: '💡 Guides',
-          children: [
-            '/concepts/concepts',
-            '/guides/controllers',
-            '/guides/environment',
-            '/guides/databases',
-            '/guides/deployment',
-            '/guides/graphql',
-            '/guides/types',
-            '/guides/websocket',         ]
-        },
-        {
-          collapsable: true,
-          title: '💻 Command Line Interface',
-          children: ['cli/CLI'],
-        },
-        {
-          collapsable: false,
-          title: '📚 Resources',
-          children: [
-            '/articles/articles',
-          ],
-        },
-      ]
+      {
+        collapsable: false,
+        title: '🚀 Getting started',
+        children: [
+          '/getting-started/introduction',
+          '/getting-started/install-requirements'
+        ],
+      },
+      {
+        collapsable: true,
+        title: '💡 Guides',
+        children: [
+          '/concepts/concepts',
+          '/guides/controllers',
+          '/guides/environment',
+          '/guides/databases',
+          '/guides/deployment',
+          '/guides/graphql',
+          '/guides/types',
+          '/guides/websocket',         ]
+      },
+      {
+        collapsable: true,
+        title: '💻 Command Line Interface',
+        children: ['/cli/CLI'],
+      },
+      {
+        collapsable: false,
+        title: '📚 Resources',
+        children: [
+          '/articles/articles',
+        ],
+      },
+    ]
   },
 };
 
