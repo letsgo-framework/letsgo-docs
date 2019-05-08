@@ -52,7 +52,7 @@ module.exports = {
   description,
   base: '/',
   themeConfig: {
-    repo: 'letsgo-framework/letsgo',
+    repo: 'letsgo-framework/letsgo-docs',
     website: 'https://letsgo-framework.github.io/',
     slack: 'https://slack.letsgo.io',
     blog: 'https://blog.letsgo.io',
@@ -66,7 +66,9 @@ module.exports = {
         title: '🚀 Getting started',
         children: [
           '/getting-started/introduction',
-          '/getting-started/install-requirements'
+          '/getting-started/install-requirements',
+          '/getting-started/quick-start',
+          '/getting-started/quick-tutorial'
         ],
       },
       {

@@ -16,6 +16,14 @@ Install guide is available at the official [Golang](https://golang.org/doc/insta
 
 Install guide is available at the official [Mongo](https://docs.mongodb.com/manual/installation/) site.
 
+## Install Glide
+
+Install guide is available at official [Glide](https://github.com/Masterminds/glide) github.
+
+::: note
+Please make sure GOBIN is set for letsgo-cli to work properly
+:::
+
 
 ::: tip NEXT STEPS
 👏 Congrats, you are all set! Now that Go is installed you can proceed to the [Quick start](/getting-started/quick-start.html).

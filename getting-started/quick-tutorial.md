@@ -1,8 +1,6 @@
-# Quick Start Guide
+# Quick Tutorial
 
 Get ready to make letsgo up and running in **less than 5 minutes** 🚀
-
-*For a step-by-step guide, please take a look at the [detailed tutorial](quick-tutorial.html).*
 
 ## 1. Install letsgo-cli globally
 
@@ -33,3 +31,5 @@ go run main.go
 ## 5. Consume API
 
 Hello World API is accessible at [`http://localhost:8080/api/v1`](http://localhost:8080/api/v1).
+
+*A TODO API build over [quick start](quick-start.html).*
