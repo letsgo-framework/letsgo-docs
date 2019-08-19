@@ -2,7 +2,7 @@ const container = require('markdown-it-container');
 
 const ogprefix = 'og: http://ogp.me/ns#';
 const title = 'letsGo Documentation';
-const description = 'A Go Boilerplate for RESTful API';
+const description = 'A go to framework for RESTful API';
 const color = '#2F80ED';
 const author = 'Sab94';
 const url = 'https://letsgo-framework.github.io/';
@@ -80,9 +80,8 @@ module.exports = {
           '/guides/environment',
           '/guides/databases',
           '/guides/deployment',
-          '/guides/graphql',
           '/guides/types',
-          '/guides/websocket',         ]
+          '/guides/log',    ]
       },
       {
         collapsable: true,

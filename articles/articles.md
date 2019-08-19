@@ -4,14 +4,12 @@ Go further with letsgo, official and community tutorials are here to help you:
 
 ### Getting Started
 
- - [Getting Started guide]()
- - [Quickstart with Docker]()
+ - [Getting Started guide](../getting-started/quick-start.md)
 
 ### Development
 
- - [Building a TODO app react and letsgo (official)]()
+ - [Introduction](https://medium.com/@asabya/letsgo-a-go-to-boilerplate-for-restful-api-713ee54d9201)
  
 ### Deployment
 
-- [How to deploy a letsgo API on Ubuntu 16.04 (official)]()
-- [Deploying a letsgo API on Heroku (official)]()
+Coming Soon

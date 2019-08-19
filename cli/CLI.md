@@ -38,14 +38,45 @@ letsgo-cli generate type my_type
 - **letsgo-cli generate type my_type**<br/>
   Generates an empty type called **my_type** in the `./types` folder. 
 
-## letsgo-cli version
-Prints the letsgo version of current project  and letsgo-cli
+## letsgo-cli log clear
+Clear log file at `log/letsgo.log`
 
 ```bash
-letsgo-cli version
+letsgo-cli log clear
 ```
 
-***
+## letsgo-cli log <LINE_COUNT>
+Prints the last N number lines of `log/letsgo.log`
+
+```bash
+letsgo-cli log 50
+```
+
+## letsgo-cli build
+Build current project
+
+```bash
+letsgo-cli build
+```
+
+## letsgo-cli dockerize
+Update binary name in `Dockerfile`
+
+```bash
+letsgo-cli dockerize myApp
+```
+
+::: note 
+This works only once 
+:::
+
+## letsgo-cli run
+Run the current project
+
+```bash
+letsgo-cli run
+letsgo-cli run -livereload // run the current project with livereload
+```
 
 ## letsgo-cli help
 List CLI commands.

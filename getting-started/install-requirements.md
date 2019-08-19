@@ -21,7 +21,7 @@ Install guide is available at the official [Mongo](https://docs.mongodb.com/manu
 Install guide is available at official [Glide](https://github.com/Masterminds/glide) github.
 
 ::: note
-Please make sure GOBIN is set for letsgo-cli to work properly
+Please make sure GOBIN is set for [letsgo-cli](../cli/CLI.html) to work properly
 :::
 
 

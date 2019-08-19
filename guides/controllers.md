@@ -14,7 +14,7 @@ Each controller’s method receives the `context` (`c *gin.Context`) object as f
 
 #### Example
 
-In this example, we are defining a specific route in `./routes/routes.go` that takes `controllers.Home` as handler. It means that every time a the `/api/v1` URL is requested, the server will call the `Home` method in the `controllers` package. Our `Home` method returns a JSON object.
+In this example, we are defining a specific route in `./routes/routes.go` that takes `controllers.Greet` as handler. It means that every time a the `/api/v1` URL is requested, the server will call the `Greet` method in the `controllers` package which returns a JSON object.
 
 **Path —** `./routes/routes.go`.
 ```go
@@ -31,14 +31,14 @@ func PaveRoutes() *gin.Engine {
 	// Grouped api
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("/", controllers.Home)
+		v1.GET("/", controllers.Greet)
 	}
 
 	return r
 }
 ```
 
-**Path —** `./controllers/main_controller.go`.
+**Path —** `./controllers/greeter_controller.go`.
 ```go
 package controllers
 
@@ -46,20 +46,23 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
-// The content below is only a placeholder and can be replaced.
+// Welcome !! The content below is only a placeholder and can be replaced.
 type Welcome struct {
-	Greet string `json:"greet"`
-	Doc string `json:"link_to_doc"`
-	Github string `json:"github"`
+	Greet    string `json:"greet"`
+	Doc      string `json:"link_to_doc"`
+	Github   string `json:"github"`
 	Examples string `json:"examples"`
 }
-func Home(c *gin.Context) {
-	var welcome Welcome
-	welcome.Greet = `Welcome to letsGo`
-	welcome.Doc = `Link to readme`
-	welcome.Github = `Link to github`
-	welcome.Examples = `Link To examples`
+
+// Greet is the response for api/v1
+func Greet(c *gin.Context) {
+
+	welcome := Welcome{
+		Greet:    "Welcome to letsGo",
+		Doc:      "https://letsgo-framework.github.io/",
+		Github:   "https://github.com/letsgo-framework/letsgo",
+		Examples: "Coming Soon",
+	}
 	c.JSON(200, welcome)
 	c.Done()
 }

@@ -1,28 +1,12 @@
 # Concepts
 
   - Table of contents
-    - [Ingredients](#ingredients)
     - [Files structure](#files-structure)
     - [Routing](#routing)
     - [Controllers](#controllers)
     - [Types](#types)
+    - [Log](#log)
 ***
-
-## Ingredients
-
-- Go
-- [gin] ( https://github.com/gin-gonic/gin )
-- [mongodb] ( https://www.mongodb.com/ )
-- [mongo-go-driver] ( https://github.com/mongodb/mongo-go-driver )
-- [oauth2] ( https://github.com/golang/oauth2 )
-- [check] ( https://godoc.org/gopkg.in/check.v1 )
-- [godotenv] ( https://github.com/joho/godotenv )
-- [websocket] ( https://github.com/gorilla/websocket )
-- [go-oauth2/gin-server] ( github.com/go-oauth2/gin-server )
-- [cors] ( github.com/gin-contrib/cors )
-- [graphql] ( github.com/graphql-go/graphql )
-- [graphql-go/handler] ( github.com/graphql-go/handler )
-
 
 ## Files structure
 
@@ -30,12 +14,13 @@ By default, your project's structure will look like this:
 
 - `/controllers`: contains the core code of your application.
 - `/database`: contains mongo-go-driver connector.
-- `/gql`: contains graphql rootQuery, quires, mutations, types
 - `/helpers`: contains helpers functions of your application.
 - `/middlewares`: contains middlewares of your application.
 - `/routes`: directory contains RESTful api routes of your application.
 - `/tests`: contains tests of your application.
 - `/types`: contains the types/structures of your application.
+- `/jobs`: for cron jobs
+- `/mail`: for sending mails and mail templates
 
 ## Controllers
 
@@ -48,21 +33,22 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
-// The content below is only a placeholder and can be replaced.
+// Welcome !! The content below is only a placeholder and can be replaced.
 type Welcome struct {
-	Greet string `json:"greet"`
-	Doc string `json:"link_to_doc"`
-	Github string `json:"github"`
+	Greet    string `json:"greet"`
+	Doc      string `json:"link_to_doc"`
+	Github   string `json:"github"`
 	Examples string `json:"examples"`
 }
-// GET `/api/v1`
-func Home(c *gin.Context) {
-	var welcome Welcome
-	welcome.Greet = `Welcome to letsGo`
-	welcome.Doc = `Link to readme`
-	welcome.Github = `Link to github`
-	welcome.Examples = `Link To examples`
+
+// Greet is the response for api/v1
+func Greet(c *gin.Context) {
+	welcome := Welcome{
+		Greet:    "Welcome to letsGo",
+		Doc:      "https://letsgo-framework.github.io/",
+		Github:   "https://github.com/letsgo-framework/letsgo",
+		Examples: "Coming Soon",
+	}
 	c.JSON(200, welcome)
 	c.Done()
 }
@@ -72,15 +58,15 @@ In this example, any time the `/api/v1` URL on your app is requested, the respon
 ```json
 {
     "greet": "Welcome to letsGo",
-    "link_to_doc": "Link to readme",
-    "github": "Link to github",
-    "examples": "Link To examples"
+    "link_to_doc": "https://letsgo-framework.github.io/",
+    "github": "https://github.com/letsgo-framework/letsgo",
+    "examples": "Coming Soon"
 }
 ```
 
 ### Where are the controllers defined?
 
-The controllers are defined in `./controllers/` folders i.e. `controllers` package. Every Go file put in this folder will be loaded with a `controllers` package. They are available through `controllers` package name. By convention, controllers' names can be `snake_case`, but the methods should be exported having every word of the method name (include the first one) capitalized `GetCredentials`, `Home`.
+The controllers are defined in `./controllers/` folders i.e. `controllers` package. Every Go file put in this folder will be loaded with a `controllers` package. They are available through `controllers` package name. By convention, controllers' filename can be `snake_case`, but the methods should be exported having every word of the method name (include the first one) capitalized `GetCredentials`, `Home`.
 
 ::: note
 Please refer to the [controllers' guide](../guides/controllers.md) for more information.
@@ -92,8 +78,8 @@ Please refer to the [controllers' guide](../guides/controllers.md) for more info
 
 ## Types
 
-Types are a representation of the database's structure. Types can be defined in the `types` package i.e. inside `./types`
-Every Go file put in this folder will be loaded with a `types` package. By convention, types' names can be `snake_case`, but the methods should be exported having every word of the method name (include the first one) capitalized `TokenResponse`, `Users`.
+Types are a representation of the database's structure or normal struct. Types can be defined in the `types` package i.e. inside `./types`
+Every Go file put in this folder will be loaded with a `types` package. By convention, types' filename can be `snake_case`, but the struct should be exported having every word of the struct name (include the first one) capitalized `TokenResponse`, `Users`.
 
 **Path —** `./types/access_token_response.go`. 
 ```go
@@ -111,4 +97,15 @@ In this example, there is a `TokenResponse` types which contains two attributes 
 
 A types must contain a list of attributes, and each of these attributes must have a type.
 
+::: note
+Please refer to the [types' guide](../guides/types.md) for more information.
+:::
+
+## Log
+
+`letslog` is defined under `letslog` package in `./log/letslog.go`. It uses four severity levels (Debug, Info, Warn, Error) to display logs and save them in `./log/letsgo.log`
+
+::: note
+Please refer to the [log' guide](../guides/log.md) for more information.
+:::
 ***

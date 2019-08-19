@@ -29,6 +29,10 @@ cd myapp
 ```bash
 go run main.go
 ```
+or for live reload
+```bash
+letsgo-cli run -livereload
+```
 
 ## 5. Consume API
 

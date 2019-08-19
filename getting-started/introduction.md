@@ -1,6 +1,6 @@
 # Introduction 
 
-Welcome to the open source [Go Framework for RESTful API](https://github.com/letsgo-framework/letsGo) developers love.
+Welcome to [letsgo](https://github.com/letsgo-framework/letsGo) documentation. letsgo is a **'batteries included'** RESTApi framework that you will fall in love with.
 
 ## letsGo Documentation
 
