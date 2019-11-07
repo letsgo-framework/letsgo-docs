@@ -16,9 +16,14 @@ Install guide is available at the official [Golang](https://golang.org/doc/insta
 
 Install guide is available at the official [Mongo](https://docs.mongodb.com/manual/installation/) site.
 
-## Install Glide
+## GO module
 
-Install guide is available at official [Glide](https://github.com/Masterminds/glide) github.
+letsgo uses go module to manage dependencies. So You need to enable `GO111MODULE`.
+```
+export GO111MODULE=on
+```
+
+*** If you use [atom](https://atom.io/) for development, to work with [go-plus](https://atom.io/packages/go-plus) properly you need to run `go mod vendor`
 
 ::: note
 Please make sure GOBIN is set for [letsgo-cli](../cli/CLI.html) to work properly

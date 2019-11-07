@@ -76,6 +76,12 @@ Please refer to the [controllers' guide](../guides/controllers.md) for more info
 
 `./routes/routes.go` file define all available routes.
 
+Currently letsgo only supports between `mux` or `gin` as router. Default is `gin`.
+
+::: note
+Please refer to the [Create a new project](../cli/CLI.md#create-a-new-project) for more information.
+:::
+
 ## Types
 
 Types are a representation of the database's structure or normal struct. Types can be defined in the `types` package i.e. inside `./types`

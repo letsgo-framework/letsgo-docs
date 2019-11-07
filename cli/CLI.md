@@ -6,17 +6,20 @@ letsgo comes with a full featured Command Line Interface (CLI) which lets you sc
 ```
 go get github.com/letsgo-framework/letsgo-cli
 ```
-
+::: note
+Under the hood letsgo-cli uses [fresh](https://github.com/gravityblast/fresh) to livereload. So Install that package seperately `go get github.com/pilu/fresh`.
+:::
 ***
 
 ## Create a new project
 
 ```bash
-letsgo-cli init <import_namespace> <project_name>
+letsgo-cli init -importPath=<import_namespace> -directory=<project_name> -router=<router>
 ```
 
-- **letsgo-cli init github.com myapp**<br/>
-  Generates a new project called **myapp** in your `GOPATH` inside `github.com` and installs the default plugins through the glide.
+- **letsgo-cli init -importPath=github.com -directory=myapp -router=gin**<br/>
+  Generates a new project called **myapp** in your `GOPATH` inside `github.com` having `gin` as router.
+  Currently letsgo only supports between `mux` or `gin`. Default is `gin`.
 
 ## letsgo-cli generate controller
 Create a new controller
@@ -59,7 +62,7 @@ Build current project
 letsgo-cli build
 ```
 
-## letsgo-cli dockerize
+<!-- ## letsgo-cli dockerize
 Update binary name in `Dockerfile`
 
 ```bash
@@ -68,7 +71,7 @@ letsgo-cli dockerize myApp
 
 ::: note 
 This works only once 
-:::
+::: -->
 
 ## letsgo-cli run
 Run the current project

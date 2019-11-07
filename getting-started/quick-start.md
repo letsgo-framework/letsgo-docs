@@ -15,7 +15,7 @@ go get github.com/letsgo-framework/letsgo-cli
 ## 2. Create a new project
 
 ```bash
-letsgo-cli init github.com myapp
+lletsgo-cli init -importPath=github.com -directory=myapp -router=gin
 ```
 
 ## 3. cd into the newly created project
